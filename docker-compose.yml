@@ -1,0 +1,26 @@
+version: '3.1'
+services:
+        adminer:
+            image: adminer
+            restart: always
+            ports:
+                - 8080:8080
+        dbPostgres:
+            image: postgres:10
+            restart: always
+            ports:
+                - 5432:5432
+            environment:
+                POSTGRES_USER: root
+                POSTGRES_PASSWORD: ArrayPointer77
+                
+        dbMysql:
+            image: mysql:8.0
+            restart: always
+            ports:
+                - 3306:3306
+            environment:
+                MYSQL_ROOT_USER: root
+                MYSQL_ROOT_PASSWORD: ArrayPointer77
+               
+       
